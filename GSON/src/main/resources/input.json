@@ -1,0 +1,20 @@
+{
+  "BARSIK": {
+    "name": "BARSIK",
+    "age": 7,
+    "eat" : ["meat", "fish"],
+    "habits" : ["sleeping"]
+  },
+  "PUSHOK": {
+    "name": "PUSHOK",
+    "age": 3,
+    "eat" : ["chicken", "fish"],
+    "habits" : ["jumping"]
+  },
+  "SNEJOK": {
+    "name": "SNEJOK",
+    "age": 11,
+    "eat" : ["milk", "feed"],
+    "habits" : ["crying"]
+  }
+}
