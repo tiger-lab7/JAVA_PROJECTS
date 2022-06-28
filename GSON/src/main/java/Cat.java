@@ -6,6 +6,7 @@ public class Cat {
     int age;
     String[] eat;
     List<String> habits;
+    double weight;
 
     @Override
     public String toString() {
@@ -14,6 +15,7 @@ public class Cat {
                 ", age=" + age +
                 ", eat=" + Arrays.toString(eat) +
                 ", habits=" + habits +
+                ", weight=" + weight +
                 '}';
     }
 }

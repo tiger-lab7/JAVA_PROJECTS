@@ -3,18 +3,21 @@
     "name": "BARSIK",
     "age": 7,
     "eat" : ["meat", "fish"],
-    "habits" : ["sleeping"]
+    "habits" : ["sleeping"],
+    "weight" : 0.376E1
   },
   "PUSHOK": {
     "name": "PUSHOK",
     "age": 3,
     "eat" : ["chicken", "fish"],
-    "habits" : ["jumping"]
+    "habits" : ["jumping"],
+    "weight" : 2.513
   },
   "SNEJOK": {
     "name": "SNEJOK",
     "age": 11,
     "eat" : ["milk", "feed"],
-    "habits" : ["crying"]
+    "habits" : ["crying"],
+    "weight" : 4.11
   }
 }
