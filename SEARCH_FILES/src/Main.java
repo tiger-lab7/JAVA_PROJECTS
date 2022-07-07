@@ -14,6 +14,7 @@ public class Main {
         String extension = sc.nextLine();
         System.out.println("Enter substring to search");
         String substring = sc.nextLine();
-        SearchFilesEngine.INSTANCE.search_files(startDirectory, extension, substring);
+        //SearchFilesEngine.INSTANCE.search_files(startDirectory, extension, substring);
+		SearchFilesSimple.INSTANCE.search_files(startDirectory, extension, substring);
     }
 }
