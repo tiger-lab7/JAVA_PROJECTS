@@ -38,19 +38,20 @@ class SearchSubstringInFile implements Runnable {
 
     @Override
     public void run() {
-        try (FileReader fileReader = new FileReader(f)) {
-            try (BufferedReader bufferedReader = new BufferedReader(fileReader)) {
-                String file_str = bufferedReader.lines()
-                        .collect(Collectors.joining())
-                        .toLowerCase(Locale.ROOT);
-                if (file_str.contains(substr))
-                    System.out.println(f.getAbsolutePath());
-            }
-        } catch (FileNotFoundException e) {
-            System.out.println("Cannot access to " + f);
-        }
-        catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+		for (String charset : Config.charsets) {
+			try (FileReader fileReader = new FileReader(f);
+					BufferedReader bufferedReader = new BufferedReader(fileReader);) {
+					String file_str = bufferedReader.lines()
+							.collect(Collectors.joining())
+							.toLowerCase(Locale.ROOT);
+					if (file_str.contains(substr))
+						System.out.println(f.getAbsolutePath());
+				}
+			} catch (FileNotFoundException e) {
+				System.out.println("Cannot access to " + f);
+			}
+			catch (IOException e) {
+				throw new RuntimeException(e);
+			}
     }
 }
