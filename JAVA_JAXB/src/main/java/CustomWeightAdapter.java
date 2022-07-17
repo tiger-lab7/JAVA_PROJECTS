@@ -3,7 +3,7 @@ fields in Java objects
 * */
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 
-public class WeightAdapter extends XmlAdapter<String, Double> {
+public class CustomWeightAdapter extends XmlAdapter<String, Double> {
 
     @Override
     public Double unmarshal(String s) throws Exception {
