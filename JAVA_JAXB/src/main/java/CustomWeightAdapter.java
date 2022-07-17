@@ -1,6 +1,7 @@
 /* Example of a custom JAXB type adapter for marshalling and unmarshalling values of
 fields in Java objects
 * */
+
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 
 public class CustomWeightAdapter extends XmlAdapter<String, Double> {
