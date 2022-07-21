@@ -1,0 +1,15 @@
+<Cat>
+  <name>Oliver</name>
+  <возраст>2</возраст>
+  <вес>4.5</вес>
+  <doings>
+    <Evening>Crying</Evening>
+    <Night>Sleeping</Night>
+    <Morning>Jumping</Morning>
+    <Afternoon>Eating</Afternoon>
+  </doings><hobbies>{"hobbie":"purr"}</hobbies>
+  <Evening>Crying</Evening>
+  <Night>Sleeping</Night>
+  <Morning>Jumping</Morning>
+  <Afternoon>Eating</Afternoon>
+</Cat>

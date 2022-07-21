@@ -10,7 +10,7 @@ enum DescriptionEnum {
 }
 
 
-@Target({ElementType.METHOD, ElementType.CONSTRUCTOR})
+@Target({ElementType.METHOD, ElementType.CONSTRUCTOR, ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @interface Cool {
     int level();
