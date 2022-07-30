@@ -11,7 +11,7 @@ public class SoftReferenceExample {
         // testClass object still alive because the memory has not been full yet
         System.out.println("Before memory full n = " + testClassSoftReference.get().n);
 
-        memoryFuller();
+        memoryFiller();
 
         try {
             // testClass object was destroyed by memory overflow
@@ -21,7 +21,7 @@ public class SoftReferenceExample {
         }
     }
 
-    public static void memoryFuller() {
+    public static void memoryFiller() {
         int[] array = new int[246_000_000]; // Value for overflow the heap memory
     }
 }
