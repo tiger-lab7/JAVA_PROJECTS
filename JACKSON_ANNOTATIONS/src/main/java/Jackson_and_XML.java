@@ -20,7 +20,7 @@ public class Jackson_and_XML {
         File file = new File("src/main/resources/testxml.xml");
 
         XmlMapper xmlMapper = new XmlMapper();
-        xmlMapper.enable(SerializationFeature.INDENT_OUTPUT);
+        xmlMapper.enable(SerializationFeature.INDENT_OUTPUT); // Делает отступы
         xmlMapper.writeValue(file, cat);
     }
 }
