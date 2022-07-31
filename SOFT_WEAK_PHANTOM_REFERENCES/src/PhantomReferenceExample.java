@@ -18,6 +18,6 @@ public class PhantomReferenceExample {
             System.out.println("No object by reference!");
         }
 
-        System.out.println(referenceQueue.poll().get().n);
+        System.out.println(referenceQueue.poll().get());
     }
 }
