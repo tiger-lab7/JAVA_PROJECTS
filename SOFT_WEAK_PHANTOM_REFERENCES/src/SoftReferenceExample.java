@@ -9,7 +9,7 @@ public class SoftReferenceExample {
         System.gc();
         Thread.sleep(1000);
         // testClass object still alive because the memory has not been full yet
-        System.out.println("Before memory full n = " + testClassSoftReference.get().n);
+        System.out.println("Before memory overflow: " + testClassSoftReference.get());
 
         memoryFiller();
 
@@ -22,6 +22,6 @@ public class SoftReferenceExample {
     }
 
     public static void memoryFiller() {
-        int[] array = new int[246_000_000]; // Value for overflow the heap memory
+        int[] array = new int[246_000_000]; // Empiric value for overflow the heap memory
     }
 }

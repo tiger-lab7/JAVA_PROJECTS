@@ -5,4 +5,11 @@ public class TestClass {
     public void finalize() {
         System.out.println("Perform destroying the object");
     }
+
+    @Override
+    public String toString() {
+        return "TestClass{" +
+                "n=" + n +
+                '}';
+    }
 }
