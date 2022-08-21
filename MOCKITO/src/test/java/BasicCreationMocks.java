@@ -1,9 +1,11 @@
+import org.junit.Test;
 import org.mockito.Mockito;
 
 
-public class Main {
+public class BasicCreationMocks {
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         DataService dataService = Mockito.mock(DataService.class);
         System.out.println(dataService.getClass() + " " +
                 (dataService instanceof DataService) + " " +

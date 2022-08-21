@@ -2,7 +2,7 @@ import java.util.WeakHashMap;
 
 public class WeakHashMapExample {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
 
         WeakHashMap<TestClass, String> weakHashMap = new WeakHashMap<>();
         weakHashMap.put(new TestClass(), "Object1");

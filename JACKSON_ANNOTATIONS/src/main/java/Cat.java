@@ -28,4 +28,6 @@ public class Cat {
 
     @JsonRawValue // Воспринимать значение как сырую строку
     String hobbies;
+
+
 }
