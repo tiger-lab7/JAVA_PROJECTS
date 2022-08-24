@@ -1,7 +1,6 @@
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 
 public class FileChannelReading {
@@ -9,21 +8,17 @@ public class FileChannelReading {
 
     public static void main(String[] args) throws IOException {
         FileChannel fileChannel = FileChannel.open(Path.of("src/main/resources/testfile.txt"));
-        ByteBuffer textBuffer = ByteBuffer.allocate(bufferCapacity);
+        ByteBuffer byteBuffer = ByteBuffer.allocate(bufferCapacity);
 
-        int bytesReadCount = 0;
-
-        while (bytesReadCount != 1) {
-            bytesReadCount = fileChannel.read(textBuffer);
-            System.out.println(bytesReadCount);
-            System.out.println(new String(textBuffer.array(), StandardCharsets.UTF_8));
-            textBuffer.flip();
+        StringBuilder stringBuilder = new StringBuilder();
+        while (fileChannel.read(byteBuffer) > 0) {
+            byteBuffer.flip();
+            stringBuilder.delete(0, stringBuilder.length());
+            for (int i = 0; i < byteBuffer.limit(); i++) {
+                stringBuilder.append((char)byteBuffer.get());
+            }
+            System.out.println(stringBuilder);
+            byteBuffer.clear();
         }
-
     }
-
-    static boolean bufferFull(int bytesRead) {
-        return bytesRead < bufferCapacity;
-    }
-
 }
